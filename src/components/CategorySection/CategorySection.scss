@@ -137,3 +137,119 @@
 		}
 	}
 }
+
+@media (max-width: 800px) {
+	.quizzes {
+		padding: 1.5rem;
+	
+		.wrapper {
+			.loading {
+				font-size: 3rem;
+			}
+	
+			.error {
+				font-size: 1.5rem;
+			}
+	
+			.try-again {
+				padding: 1rem 1.5rem;
+				font: 700 1rem "Bebas Neue", sans-serif;
+				margin-top: 1.25rem;
+	
+				.refresh {
+					margin-right: 0.75rem;
+				}
+			}
+		}
+	
+		.heading {
+			label {
+				font-size: 2rem;
+			}
+	
+			.search {
+				padding: 0.5rem;
+				border-radius: 28px;
+
+				.search-icon {
+					font-size: 0.75rem;
+				}
+	
+				.search-input {
+					font-size: 0.8rem;
+					margin-left: 0.5rem;
+				}
+			}
+		}
+	
+		hr {
+			margin: 0.25rem 0;
+			height: 0.3rem;
+		}
+	
+		#add-questions {
+			padding: 0.75rem;
+			font-size: 1.5rem;
+			margin-top: 1rem;
+		}
+	}
+}
+
+@media (max-width: 500px) {
+	.quizzes {
+		padding: 0.75rem;
+	
+		.wrapper {
+			.loading {
+				font-size: 3rem;
+			}
+	
+			.error {
+				font-size: 1.5rem;
+			}
+	
+			.try-again {
+				padding: 1rem 1.5rem;
+				font: 700 1rem "Bebas Neue", sans-serif;
+				margin-top: 1.25rem;
+	
+				.refresh {
+					margin-right: 0.75rem;
+				}
+			}
+		}
+	
+		.heading {
+			label {
+				font-size: 1.5rem;
+			}
+	
+			.search {
+				max-width: 10rem;
+				padding: 0.5rem;
+				border-radius: 28px;
+
+				.search-icon {
+					font-size: 0.75rem;
+				}
+	
+				.search-input {
+					font-size: 0.8rem;
+					margin-left: 0.5rem;
+				}
+			}
+		}
+	
+		hr {
+			margin: 0.2rem 0;
+			height: 0.2rem;
+		}
+	
+		#add-questions {
+			width: 100%;
+			padding: 0.5rem;
+			font-size: 1.5rem;
+			margin-top: 1rem;
+		}
+	}
+}
