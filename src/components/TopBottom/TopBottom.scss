@@ -1,0 +1,34 @@
+.top,
+.bottom {
+	padding: 2rem 5rem;
+	background-color: #e599f7;
+	border-bottom: 5px solid #9c36b5;
+	pointer-events: none;
+
+	label {
+		font: 900 3rem "Josefin Sans", sans-serif;
+		color: #183153;
+	}
+
+	.content {
+		font-size: 1.25rem;
+		text-align: justify;
+		color: #183153;
+	}
+}
+
+.bottom {
+	background-color: #63e6be;
+	border-top: 5px solid #0ca678;
+	border-bottom: none;
+
+	label {
+		color: #183153;
+	}
+
+	.content {
+		font-size: 1.25rem;
+		text-align: justify;
+		color: #183153;
+	}
+}

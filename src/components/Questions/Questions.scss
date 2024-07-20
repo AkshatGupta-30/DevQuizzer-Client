@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Signika+Negative:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pridi:wght@200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Pridi:wght@200;300;400;500;600;700&display=swap");
+
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.questions {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	padding: 1.5rem;
+	gap: 3rem;
+
+	.details {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		width: 100%;
+		gap: 1.75rem;
+
+		.name {
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			align-items: start;
+			justify-content: center;
+			gap: 0.75rem;
+			width: 100%;
+
+			.number {
+				font: 400 1.5rem "Lilita One", sans-serif;
+				pointer-events: none;
+			}
+
+			.ques {
+				font: 600 1.4rem "Reddit Sans Condensed", sans-serif;
+				pointer-events: none;
+				width: 100%;
+			}
+
+			.linkedin-id {
+				min-width: 7rem;
+				display: flex;
+				flex-direction: column;
+				align-items: end;
+
+				.contri {
+					font: 600 1rem "Caudex", sans-serif;
+					pointer-events: none;
+				}
+
+				.id {
+					font: 600 1.4rem "Pridi", sans-serif;
+					text-decoration: none;
+					cursor: pointer;
+
+					&:hover {
+						text-decoration: underline;
+					}
+
+					&:visited,
+					&:not(:visited) {
+						color: blue;
+					}
+				}
+			}
+		}
+
+		.options {
+			display: flex;
+			flex-direction: column;
+			width: max-content;
+			min-width: 45%;
+			max-width: 70%;
+			gap: 1rem;
+			padding-left: 3rem;
+			position: relative;
+
+			.option {
+				font: 400 1.25rem "Reddit Sans Condensed", sans-serif;
+				min-height: 3.3rem;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: space-between;
+				gap: 0.75rem;
+				border: 1px solid #b9d9eb;
+				background-color: #fafafa;
+				padding: 0.75rem 1rem;
+				border-radius: 1rem;
+				cursor: pointer;
+				position: relative;
+
+				&:hover {
+					border-color: #80a3ff;
+					background-color: #f8f7ff;
+				}
+
+				&:active {
+					scale: 0.99;
+				}
+
+				&.selected {
+					border-color: #8870ff;
+					border-width: 3px;
+					background-color: #e7eeff;
+				}
+
+				&.correct {
+					background: #2cff001a;
+
+					&::before {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background: white;
+						border-radius: 1rem;
+						z-index: -1;
+					}
+				}
+
+				&.incorrect {
+					background: #ff00001a;
+
+					&::before {
+						content: "";
+						position: absolute;
+						top: 0;
+						left: 0;
+						width: 100%;
+						height: 100%;
+						background: white;
+						border-radius: 1rem;
+						z-index: -1;
+					}
+				}
+
+				.false-mark {
+					color: red;
+				}
+
+				.true-mark {
+					color: green;
+				}
+			}
+		}
+	}
+
+	button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: none;
+		outline: none;
+		padding: 0.4rem 1rem;
+		border-top-right-radius: 15px;
+		border-bottom-left-radius: 15px;
+		color: black;
+		cursor: hover;
+		cursor: pointer;
+		font-size: 1.25rem;
+		gap: 0.25rem;
+	}
+
+	.extra-btns {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: end;
+		flex-direction: row;
+		gap: 1rem;
+
+		.mark {
+			font-weight: 900;
+			font-size: 1.25rem;
+			border: 2px solid silver;
+
+			.not-marked {
+				font-size: 1.5rem;
+				color: black;
+			}
+			.marked {
+				font-size: 1.75rem;
+				color: #fbbe0d;
+			}
+
+			&:active {
+				scale: 0.99;
+			}
+		}
+
+		.clear {
+			font-weight: 900;
+			background-color: #4889f4;
+			color: white;
+
+			&:active {
+				scale: 0.99;
+			}
+		}
+
+		.report {
+			font-weight: 900;
+			background-color: #eb493b;
+			color: white;
+
+			&:active {
+				scale: 0.99;
+			}
+		}
+	}
+}

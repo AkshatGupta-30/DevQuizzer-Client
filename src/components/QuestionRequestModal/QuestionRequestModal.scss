@@ -1,0 +1,133 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.background {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: #bdbdbde6;
+}
+
+#ques-request {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 75%;
+	max-height: 90vh;
+	padding: 1rem 2rem;
+	background: white;
+	box-shadow: 1px 1px 10px 1px rgba($color: black, $alpha: 0.85);
+	border-radius: 10px;
+	transition: top 0ms ease-in-out 200ms, opacity 200ms ease-in-out 0ms, transform 20ms ease-in-out 0ms;
+	display: flex;
+	overflow-y: auto;
+
+	.close-btn {
+		border: none;
+		outline: none;
+		position: absolute;
+		z-index: 1;
+		top: 10px;
+		right: 10px;
+		padding: 0.5rem;
+		aspect-ratio: 1;
+		background: #4c5264;
+		color: #eee;
+		text-align: center;
+		line-height: 15px;
+		border-radius: 8px;
+		cursor: pointer;
+
+		.icon {
+			font-size: 1.5rem;
+		}
+	}
+
+	h1 {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		font-size: 3rem;
+		text-align: center;
+		color: #183153;
+		margin: 1.5rem 0;
+	}
+
+	.form {
+		margin: 5rem 0 1rem;
+		display: flex;
+		flex-direction: column;
+		flex-grow: 1;
+		overflow-y: auto;
+
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		label {
+			font-size: 1.5rem;
+			font-weight: 600;
+			color: #183153;
+			margin: 1rem 0 0.5rem 0;
+
+			span {
+				color: silver;
+				font-size: 1rem;
+				font-weight: normal;
+				margin-left: 0.5rem;
+			}
+		}
+
+		input,
+		select {
+			height: 2rem;
+			outline: none;
+			border: 0.5px solid rgba($color: #183153, $alpha: 0.15);
+			font-size: 1.25rem;
+			border-radius: 50px;
+			padding: 0 1rem;
+
+			&:focus {
+				border: 0.5px solid rgba($color: #183153, $alpha: 0.5);
+			}
+		}
+
+		.btn-container {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: space-evenly;
+			flex-direction: row;
+			margin: 3rem 0rem 1rem;
+
+			button {
+				border: none;
+				outline: none;
+				padding: 0.6rem 1.2rem;
+				color: white;
+				font-size: 2rem;
+				font-weight: 700;
+				border-radius: 15px;
+				border-bottom: 4px solid black;
+				cursor: pointer;
+                transition: border-bottom 250ms ease-out;
+
+				&:focus {
+					border-bottom: 0px;
+				}
+			}
+
+			#cancel {
+				background-color: #f36944;
+			}
+
+			#send {
+				background-color: #63e6be;
+			}
+		}
+	}
+}

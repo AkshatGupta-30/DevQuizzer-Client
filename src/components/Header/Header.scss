@@ -1,0 +1,11 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.navbar {
+    height: 60px;
+    background-color: $primary-color;
+    @include flexcenter;
+    color: white;
+    font: 400 2.5rem "Poetsen One", sans-serif;
+    text-decoration: none;
+}

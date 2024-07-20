@@ -1,0 +1,18 @@
+@mixin flexcenter ($dir: column) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: $dir;
+}
+
+@mixin wh ($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin trbl ($top, $right, $bottom, $left) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}

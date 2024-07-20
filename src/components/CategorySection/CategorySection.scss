@@ -1,0 +1,139 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.quizzes {
+	width: 100%;
+	padding: 2rem 5rem;
+	background-color: #f0f1f3;
+
+	.wrapper {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+
+		.loading {
+			width: fit-content;
+			font: 400 6rem "Poetsen One", sans-serif;
+			background: linear-gradient(-45deg, #777 40%, #bbb 50%, #777 60%);
+			background-size: contain;
+			background-clip: text;
+			color: transparent;
+			-webkit-background-clip: text;
+			background-size: 110%;
+			background-position-x: -500%;
+			animation: shimmer 1s infinite linear;
+
+			@keyframes shimmer {
+				from {
+					background-position: 600%;
+				}
+
+				to {
+					background-position-x: -500%;
+				}
+			}
+		}
+
+		.error {
+			font: 400 2rem "Poetsen One", sans-serif;
+			color: #ff3000;
+		}
+
+		.try-again {
+			width: fit-content;
+			border: none;
+			outline: none;
+			background: #ffaa00;
+			padding: 1rem 1.5rem;
+			font: 700 2rem "Bebas Neue", sans-serif;
+			border-radius: 20px;
+			margin-top: 1.25rem;
+			color: #fff;
+			cursor: pointer;
+			&:hover {
+				scale: 1.05;
+			}
+
+			.refresh {
+				margin-right: 0.75rem;
+			}
+		}
+	}
+
+	.heading {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		label {
+			font: 400 3rem "Lilita One", sans-serif;
+			color: #183153;
+		}
+
+		.search {
+			$pad: 14px;
+
+			width: max-content;
+			display: flex;
+			align-items: center;
+			padding: $pad;
+			border-radius: 28px;
+			background: #fbfbfb;
+			transition: box-shadow 0.25s;
+
+			&:focus-within {
+				box-shadow: 0 0 2px rgba($color: #000000, $alpha: 0.75);
+			}
+
+			.search-icon {
+				color: rgba(0, 0, 0, 0.5);
+			}
+
+			.search-input {
+				font-size: 16px;
+				font-family: "Lexend", sans-serif;
+				color: #333333;
+				margin-left: $pad;
+				outline: none;
+				border: none;
+				background: transparent;
+				&::placeholder {
+					color: rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+	}
+
+	hr {
+		margin: 0.5rem 0;
+		@include wh(100%, 0.4rem);
+		background-color: #183153;
+		border-radius: 20px;
+		border: none;
+		outline: none;
+	}
+
+	.language-cards {
+		display: block;
+		width: 100%;
+	}
+
+	#add-questions {
+		border: none;
+		outline: none;
+		background: #fdd43b;
+		padding: 1rem 1.5rem;
+		font: 700 2rem "Bebas Neue", sans-serif;
+		border-radius: 20px;
+		margin-top: 1.25rem;
+		cursor: pointer;
+		&:hover {
+			scale: 1.05;
+		}
+
+		.add-icon {
+			margin-right: 0.75rem;
+		}
+	}
+}

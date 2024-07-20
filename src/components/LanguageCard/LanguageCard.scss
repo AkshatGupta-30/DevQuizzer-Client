@@ -1,0 +1,43 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.all-langs {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+	margin: 1rem 2rem;
+	padding: 2rem 1rem;
+	gap: 2rem;
+}
+
+.card {
+	@include wh(12rem, fit-content);
+	@include flexcenter;
+	justify-content: space-between;
+	background-color: white;
+	border-radius: 12px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-bottom: 0.8rem solid cyan;
+	padding: 0.5rem 0.75rem;
+	cursor: pointer;
+	text-decoration: none;
+	&:hover {
+		scale: 1.02;
+		border-color: $primary-color !important;
+	}
+
+	.svg {
+		aspect-ratio: 1;
+		height: 4rem;
+	}
+
+	label {
+		font: 700 2rem "Kanit", sans-serif;
+	}
+
+	.question-length {
+		background-color: #fafafa;
+		padding: 5px;
+		border-radius: 10px;
+		color: black !important;
+	}
+}

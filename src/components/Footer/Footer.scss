@@ -1,0 +1,59 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+footer {
+	@include wh(100%, 120px);
+	@include flexcenter;
+	position: relative;
+	background-color: $footer-bgcolor;
+
+	.social-media {
+		@include flexcenter(row);
+		flex: 1;
+		gap: 2rem;
+
+		.social-icons {
+			background-color: black;
+			border-radius: 50%;
+			color: white;
+			font-size: 21px;
+			padding: 7px;
+			cursor: pointer;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+	.copyright {
+		@include flexcenter(row);
+		@include wh(100%, auto);
+		background-color: rgb(249, 249, 249);
+		color: black;
+		padding: 12px;
+		font-size: 12px;
+		pointer-events: none;
+
+		b {
+			margin-left: 5px;
+			font-family: "Azeret Mono", monospace;
+		}
+	}
+}
+
+@media (max-width: 650px) {
+	footer {
+		@include wh(100%, 81px);
+
+		.social-media {
+			.social-icons {
+				font-size: 12px;
+				padding: 4px;
+			}
+		}
+
+		.copyright {
+			font-size: 10px;
+		}
+	}
+}

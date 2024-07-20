@@ -1,0 +1,11 @@
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.quizz {
+	background-color: #f0f1f3;
+	padding: 1rem 2rem;
+	display: flex;
+	align-items: start;
+    flex-direction: column;
+    gap: 2rem;
+}

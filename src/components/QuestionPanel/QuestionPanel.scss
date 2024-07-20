@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Marker+Hatch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap");
+
+@import "../../scss/mixins";
+@import "../../scss/variables";
+
+.question-panel {
+	display: block;
+	height: inherit;
+	z-index: 0;
+	width: 100%;
+	position: relative;
+	background-color: #fff;
+	border-radius: 12px;
+	box-shadow: 0px 0px 5px 0.5px silver;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+
+	&.incorrect {
+		box-shadow: 0px 0px 8px #ff0000a1;
+	}
+
+	&.correct {
+		box-shadow: 0px 0px 10px #2cff00a1;
+	}
+
+	.watermark-wrapper {
+		position: absolute;
+		height: 100rem;
+		width: 100rem;
+		z-index: -1;
+		top: -100%;
+		left: 0%;
+		right: 0%;
+		bottom: 0;
+		color: #edf0ff;
+		font: 900 4rem "Rubik Marker Hatch", system-ui;
+		overflow: hidden;
+		word-spacing: 6rem;
+		pointer-events: none;
+		display: flex;
+		flex-direction: column;
+		gap: 7.5rem;
+		transform: rotate(-45deg);
+		-webkit-transform: rotate(-45deg);
+		-moz-transform: rotate(-45deg);
+		pointer-events: none;
+	}
+
+	.head-wrapper {
+		z-index: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #f7fafd;
+		border: 1px solid #cce4ff;
+		padding: 0.25rem;
+		pointer-events: none;
+
+		.title {
+			width: fit-content;
+			font: 700 2rem "Kanit", sans-serif;
+
+			.logo {
+				@include flexcenter(row);
+				border-radius: 15px;
+				padding: 0.25rem 1rem;
+
+				img {
+					@include wh(3rem, 3rem);
+					margin-right: 0.5rem;
+				}
+			}
+		}
+
+		.timer-wrapper {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			font: 900 1.5rem "Fira Sans Condensed", sans-serif;
+			text-transform: capitalize;
+			padding: 0.5rem 1rem;
+
+			.timer {
+				color: $primary-color;
+			}
+
+			.numbers {
+				display: flex;
+				width: 7rem;
+				font: 900 1.25rem "Orbitron", sans-serif;
+
+				span {
+					width: 3rem;
+				}
+			}
+		}
+	}
+
+	.start-quiz {
+		position: relative;
+		z-index: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+
+		.start-box {
+			border-radius: 12px;
+			height: 15rem;
+			width: 25rem;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 0.5rem;
+
+			.start {
+				border: none;
+				outline: none;
+				font: 600 1.5rem "Roboto Slab", serif;
+				padding: 0.75rem 1rem;
+				border-radius: 10px;
+				background-color: #0e3f70;
+				color: white;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #0b3259;
+				}
+			}
+
+			.no-of-ques {
+				font: 900 1rem "Roboto Slab", serif;
+				color: #1a1a2f;
+			}
+		}
+	}
+
+	.submit-quiz {
+		position: relative;
+		z-index: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 1rem;
+
+		.sure-label {
+			font: 900 1.5rem "Roboto Slab", serif;
+			color: #1a1a2f;
+		}
+
+		.submit-box {
+			border-radius: 12px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			gap: 2rem;
+
+			button {
+				border: none;
+				outline: none;
+				font: 600 1.25rem "Roboto Slab", serif;
+				padding: 0.65rem 0.8rem;
+				border-radius: 10px;
+				background-color: #0e3f70;
+				color: white;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #0b3259;
+				}
+
+				&.cancel {
+					background-color: #ea5353;
+				}
+
+				&.submit {
+					background-color: #3cc51d;
+				}
+			}
+		}
+	}
+
+	.foot-wrapper {
+		z-index: 0;
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		background-color: #f7fafd;
+		border: 1px solid #cce4ff;
+		padding: 0.5rem;
+
+		.nav-btns {
+			border: none;
+			outline: none;
+			background-color: transparent;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 0.5rem;
+			font: 900 1.5rem "Signika Negative", serif;
+			color: #183153;
+			border-radius: 5rem;
+			padding: 0.5rem 1rem;
+			cursor: pointer;
+
+			&:hover {
+				text-decoration: underline;
+			}
+
+			&:active {
+				scale: 0.99;
+				text-decoration: underline;
+			}
+		}
+	}
+}
