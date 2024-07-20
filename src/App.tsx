@@ -12,7 +12,7 @@ const App = React.memo(() => {
 	return (
 		<div className='App'>
 			<ToastContainer />
-			<BrowserRouter basename="DevQuizzer-Client">
+			<BrowserRouter basename="/DevQuizzer-Client/">
 				<Header />
 				<Routes>
 					<Route path='/' element={<Homepage />} />
