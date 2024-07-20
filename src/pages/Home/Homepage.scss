@@ -8,4 +8,8 @@
 main {
 	@include flexcenter;
 	row-gap: 2rem;
+
+	@media (max-width: 800px) {
+		row-gap: 1rem;
+	}
 }

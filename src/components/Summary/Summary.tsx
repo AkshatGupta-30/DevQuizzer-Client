@@ -181,7 +181,7 @@ const MoreBank = () => {
 				})}
 			</div>
 			<div className='btns'>
-				{bankPage != 1 ? (
+				{bankPage !== 1 ? (
 					<button className='btn' onClick={() => setBankPage(bankPage - 1)}>
 						<div className='ico prev-ico'>➤</div>
 						<div className='name n-one'> Previous </div>
@@ -189,7 +189,7 @@ const MoreBank = () => {
 				) : (
 					<div className='vr' style={{ background: "#f81f3f" }}></div>
 				)}
-				{bankPage != Math.ceil(questions.length / bankLength) ? (
+				{bankPage !== Math.ceil(questions.length / bankLength) ? (
 					<button className='btn' onClick={() => setBankPage(bankPage + 1)}>
 						<div className='name n-two'> Next </div>
 						<div className='ico next-ico'>➤</div>
