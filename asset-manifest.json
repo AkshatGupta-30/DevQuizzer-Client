@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/DevQuizzer-Client/static/css/main.e0489476.css",
-    "main.js": "/DevQuizzer-Client/static/js/main.f73835a2.js",
+    "main.css": "/DevQuizzer-Client/static/css/main.0368c3ed.css",
+    "main.js": "/DevQuizzer-Client/static/js/main.8e55de79.js",
     "static/media/bootstrap-icons.woff?": "/DevQuizzer-Client/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/bootstrap-icons.woff2?": "/DevQuizzer-Client/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "index.html": "/DevQuizzer-Client/index.html",
-    "main.e0489476.css.map": "/DevQuizzer-Client/static/css/main.e0489476.css.map",
-    "main.f73835a2.js.map": "/DevQuizzer-Client/static/js/main.f73835a2.js.map"
+    "main.0368c3ed.css.map": "/DevQuizzer-Client/static/css/main.0368c3ed.css.map",
+    "main.8e55de79.js.map": "/DevQuizzer-Client/static/js/main.8e55de79.js.map"
   },
   "entrypoints": [
-    "static/css/main.e0489476.css",
-    "static/js/main.f73835a2.js"
+    "static/css/main.0368c3ed.css",
+    "static/js/main.8e55de79.js"
   ]
 }
