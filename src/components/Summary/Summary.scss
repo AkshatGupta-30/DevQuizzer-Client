@@ -207,3 +207,9 @@
 		color: #f00;
 	}
 }
+
+@media (max-width: 900px) {
+	.summary {
+		display: none;
+	}
+}

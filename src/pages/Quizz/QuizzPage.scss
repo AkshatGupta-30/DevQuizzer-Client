@@ -9,3 +9,11 @@
     flex-direction: column;
     gap: 2rem;
 }
+
+@media (max-width: 900px) {
+	.quizz {
+		padding: 0.5rem 1rem;
+		gap: 2rem;
+	}
+	
+}

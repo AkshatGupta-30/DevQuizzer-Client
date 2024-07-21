@@ -2,6 +2,7 @@
 @import "../../scss/variables";
 
 .quiz-area {
+	min-height: calc(100vh - 10rem);
 	width: 100%;
 
 	.heading {
@@ -27,5 +28,23 @@
 		flex-direction: row;
 		gap: 1.5rem;
 		padding: 2rem 1.5rem;
+	}
+}
+
+
+@media (max-width: 900px) {
+	.quiz-area {
+		.heading {
+			font-size: 2rem;
+		}
+	
+		hr {
+			height: 0.2rem;
+		}
+	
+		.content {
+			gap: 0.5rem;
+			padding: 1rem 0.75rem;
+		}
 	}
 }
